@@ -9,10 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+        let label = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let label = UILabel()
         //label.frame = CGRect(x: 50, y: 50, width: 200, height: 50)
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "He from code"
@@ -26,7 +26,21 @@ class ViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 150)
         label.minimumScaleFactor = 0.2
         label.adjustsFontSizeToFitWidth = true
+        //landscape mood cmd+left or right
+        //Button default is white font with no text
+        let button = UIButton()
+        button.frame = CGRect(x: 10, y: 130, width: 100, height: 30)
+        view.addSubview(button)
         
+        //Add color and title
+        button.setTitleColor(.blue, for: .normal)
+        button.setTitle("Taaap", for: .normal)
+        //Connect the button with the buttonWasTapped function by using control
+        button.addTarget(self, action: #selector(buttonWasTapped), for: .touchUpInside)
+    }
+    
+     @objc func buttonWasTapped(){
+        label.text = "BUTTON TAPPED"
     }
 
 
