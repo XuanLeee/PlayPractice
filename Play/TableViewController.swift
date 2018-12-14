@@ -9,6 +9,8 @@
 import UIKit
 
 class TableViewController: UITableViewController {
+    
+    let items = ["item 1", "item 2", "item 3"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +31,14 @@ class TableViewController: UITableViewController {
     // how many rows inside the table
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 100
+        return items.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        cell.textLabel?.text = "Wooooo"
+        cell.textLabel?.text = items[indexPath.row]
 
         return cell
     }
