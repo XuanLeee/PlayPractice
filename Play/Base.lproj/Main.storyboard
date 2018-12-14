@@ -34,21 +34,24 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Items" largeTitleDisplayMode="always" id="iK3-18-LBZ"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="showDetail" id="BSA-Bd-hFl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byX-I9-JwM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="247.82608695652175" y="66.964285714285708"/>
+            <point key="canvasLocation" x="4" y="67"/>
         </scene>
-        <!--View Controller-->
+        <!--Selected Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Play" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Selected Item" id="BYZ-38-t0r" customClass="ViewController" customModule="Play" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8D-L6-ehF">
-                                <rect key="frame" x="100" y="346" width="214" height="214"/>
+                                <rect key="frame" x="100" y="394" width="214" height="214"/>
                                 <color key="backgroundColor" red="1" green="0.90806632249999997" blue="0.91933329909999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="q8D-L6-ehF" secondAttribute="height" multiplier="1:1" id="i63-L4-Yg3"/>
@@ -78,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049.2753623188407" y="86.383928571428569"/>
+            <point key="canvasLocation" x="790" y="83"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wZZ-kl-snw">

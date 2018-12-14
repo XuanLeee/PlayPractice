@@ -42,6 +42,10 @@ class TableViewController: UITableViewController {
 
         return cell
     }
+    //Start the segue with the identifier
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: nil)
+    }
  
 
     /*
